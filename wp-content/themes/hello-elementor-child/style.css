@@ -30,3 +30,104 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
+
+/* ============================================================
+   Homepage — Hero Section
+   ============================================================ */
+
+.hero-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0d3060 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-headline {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.hero-subheadline {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #00d9e3;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  border-color: #ffffff;
+}
+
+/* ============================================================
+   Services Strip
+   ============================================================ */
+
+.services-strip {
+  background-color: var(--color-neutral);
+  padding: 80px 0;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(10, 37, 64, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.12);
+  transform: translateY(-3px);
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--color-accent);
+}
+
+.service-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #5a6a7e;
+  line-height: 1.6;
+}
