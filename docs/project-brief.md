@@ -21,3 +21,9 @@ Full redesign of John Kimani's personal brand site for his cybersecurity consult
 ## Revision Policy
 
 Two rounds of revisions per phase included.
+
+---
+
+## Change Log (Brief)
+
+- **2026-04-01:** Fixed broken ISC² profile link in Recognitions section (URL had changed after ISC² site restructure). Verified all external recognition links are live.
