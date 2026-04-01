@@ -34,3 +34,19 @@ function hello_elementor_child_google_fonts() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_google_fonts' );
+
+/**
+ * Fix WPForms email From address to use a verified domain sender
+ * Prevents SMTP rejection when the From email doesn't match hosting domain.
+ *
+ * @param array $email WPForms email notification arguments.
+ * @return array
+ */
+function hello_elementor_child_fix_wpforms_from_email( $email ) {
+    if ( isset( $email['from_address'] ) ) {
+        $email['from_address'] = get_bloginfo( 'admin_email' );
+        $email['from_name']    = get_bloginfo( 'name' );
+    }
+    return $email;
+}
+add_filter( 'wpforms_emails_send_email_data', 'hello_elementor_child_fix_wpforms_from_email' );
