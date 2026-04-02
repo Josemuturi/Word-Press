@@ -50,3 +50,17 @@ function hello_elementor_child_fix_wpforms_from_email( $email ) {
     return $email;
 }
 add_filter( 'wpforms_emails_send_email_data', 'hello_elementor_child_fix_wpforms_from_email' );
+
+/**
+ * Remove query strings from static resources for cleaner URLs.
+ * (Debug/development helper removed — clean production version only)
+ */
+function hello_elementor_child_remove_query_strings( $src ) {
+    if ( strpos( $src, '?ver=' ) ) {
+        $src = remove_query_arg( 'ver', $src );
+    }
+    return $src;
+}
+// Disabled in production — enable only for local debugging
+// add_filter( 'style_loader_src', 'hello_elementor_child_remove_query_strings', 10, 2 );
+// add_filter( 'script_loader_src', 'hello_elementor_child_remove_query_strings', 10, 2 );
